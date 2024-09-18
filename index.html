@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detailing Business Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Mini Notification -->
+    <div id="notification">
+      <span><a href="../index.html">Press here for an estimation</a></span>
+      <button id="close-notification">&times;</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav-left">
+        <a href="/home/home.html">Home</a>
+      </div>
+      <div class="nav-right">
+        <a href="tel:+1234567890" id="phone-number"
+          >Call Us</a
+        >
+      </div>
+    </nav>
+
+    <header>
+      <h1>Book Your Detailing Service</h1>
+    </header>
+
+    <main>
+      <section id="booking">
+        <h2>Book Your Service</h2>
+        <form id="booking-form">
+          <!-- Personal Information -->
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <!-- Car Information -->
+          <div class="form-group">
+            <label for="car-brand">Car Brand:</label>
+            <input type="text" id="car-brand" name="car-brand" required />
+          </div>
+
+          <div class="form-group">
+            <label for="car-model">Car Model:</label>
+            <input type="text" id="car-model" name="car-model" required />
+          </div>
+
+          <div class="form-group">
+            <label for="car-year">Car Year:</label>
+            <select id="car-year" name="car-year" required>
+              <option value="" disabled selected>Select the year</option>
+              <!-- Generate years dynamically from 1990 to 2025 -->
+              <script>
+                for (let year = 1990; year <= 2025; year++) {
+                  document.write(`<option value="${year}">${year}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+
+          <!-- Vehicle Type Dropdown -->
+          <div class="form-group">
+            <label for="vehicle-type">Select your vehicle type:</label>
+            <select id="vehicle-type" name="vehicle-type" required>
+              <option value="" disabled selected>
+                Select your vehicle type
+              </option>
+              <option value="car">Car</option>
+              <option value="suv">SUV</option>
+              <option value="truck">Truck</option>
+            </select>
+          </div>
+
+          <!-- Service Type Dropdown -->
+          <div class="form-group">
+            <label for="service-type">Select the service you want:</label>
+            <select id="service-type" name="service-type" required>
+              <option value="" disabled selected>
+                Select the service type
+              </option>
+              <option value="interior">Interior</option>
+              <option value="exterior">Exterior</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+
+          <!-- Star Rating -->
+          <div class="form-group">
+            <label for="dirtiness">How dirty is your vehicle?</label>
+            <div id="star-rating">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+          </div>
+
+          <!-- Book Now Button -->
+          <div class="form-group">
+            <button id="book-now" type="submit">Book Now</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
